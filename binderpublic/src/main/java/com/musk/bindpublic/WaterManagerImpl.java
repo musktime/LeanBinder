@@ -50,11 +50,8 @@ public abstract class WaterManagerImpl extends Binder implements IWaterManager{
             }
             case TRANSACTION_addWater: {
                 data.enforceInterface(DESCRIPTOR);
-                Water arg0;
                 if (0 != data.readInt()) {
-                    arg0 = Water.CREATOR.createFromParcel(data);
-                } else {
-                    arg0 = null;
+                    Water arg0 = Water.CREATOR.createFromParcel(data);
                 }
                 return true;
             }
