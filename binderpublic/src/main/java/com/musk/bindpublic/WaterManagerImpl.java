@@ -66,6 +66,9 @@ public abstract class WaterManagerImpl extends Binder implements IWaterManager{
         return super.onTransact(code, data, reply, flags);
     }
 
+    /**
+     * Binder代理类负责将方法代号，参数，返回值包装进parcel传递
+     */
     private static class WaterManagerProxy extends WaterManagerImpl{
         private IBinder mRemote;
 
